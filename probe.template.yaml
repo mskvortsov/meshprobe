@@ -1,0 +1,16 @@
+---
+  # MQTT broker and root topic name
+  url: "mqtt://localhost"
+  topic: "msh"
+  # Primary channel used for reporting
+  uplinkChannel: "LongFast"
+  # The source node transmitting a probe packet
+  from: "!abbacafe"
+  # The target node receiving the probe
+  to: "!deafbabe"
+  # Number of extra bytes to put into the probe packet
+  extraLoad: 0
+  # Waiting time in milliseconds for a probe reception
+  timeout: 20000
+  # Time in milliseconds between consecutive probes
+  interval: 60000
