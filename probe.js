@@ -65,6 +65,13 @@ class ProbeEngine {
         let json;
         try {
           json = JSON.parse(message.toString());
+          // Omitted numerical fields have zero value.
+          if (json.rssi === undefined) {
+            json.rssi = 0;
+          }
+          if (json.snr === undefined) {
+            json.snr = 0;
+          }
         } catch {
           // Skip if parsing failed.
           return;
