@@ -29,5 +29,6 @@ On a successful probe the fields are:
 - Configure the nodes:
     * Both nodes should uplink their primary channel with json output enabled to allow the tool to receive reports from the nodes.
     * The source node should have a downlinked `mqtt` channel to allow the tool to initiate a probe.
+    * Enable "OK to MQTT" in Lora Config on the target side (since 2.5.0 firmware version).
 - Configure `ping.yaml` using the template.
-- Run `npm i` once and then `node ping.js` to start a probing loop.
+- Run `npm i` once and then `node probe.js` to start a probing loop.
